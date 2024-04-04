@@ -1,2 +1,3 @@
 # odoo-tutorials
-A collection of Odoo addons excercises fromdocumentation tutorials
+
+A collection of Odoo addons excercises from documentation tutorials
