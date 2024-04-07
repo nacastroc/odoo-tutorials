@@ -52,8 +52,14 @@ class Property(models.Model):
     _sql_constraints = [
         ("property_expected_price_field_positive",
          "CHECK(expected_price > 0)",
-         "Choose another value - expected price must be strictly positive!"),
+         "The expected price must be strictly positive!"),
     ]
+
+    def unlink(self):
+        # Delete the related offers before deleting the property
+        for record in self:
+            record.offer_ids.unlink()  # This will delete all related offers
+        return super(Property, self).unlink()
 
     @api.constrains("expected_price")
     def _check_expected_price(self):
@@ -72,6 +78,18 @@ class Property(models.Model):
         for record in self:
             offers = record.offer_ids.mapped("price")
             record.best_price = 0 if len(offers) == 0 else max(offers)
+
+    @api.onchange("offer_ids")
+    def _check_first_offer(self):
+        """
+        Set the state of the property according to the offers.
+        :return: void
+        """
+        for record in self:
+            if len(record.offer_ids) > 0 and record.state == "new":
+                record.state = "received"
+            if len(record.offer_ids) == 0 and record.state == "received":
+                record.state = "new"
 
     @api.onchange("garden")
     def _onchange_garden(self):

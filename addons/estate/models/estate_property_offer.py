@@ -14,6 +14,7 @@ class PropertyOffer(models.Model):
     partner_id = fields.Many2one("res.partner", required=True, copy=False, string="Partner")
     price = fields.Float(string="Price", required=True, help="Price offered by the buyer")
     property_id = fields.Many2one("estate.property", required=True, copy=False, string="Property")
+    property_type_id = fields.Many2one(related="property_id.property_type_id", store=True)
     status = fields.Selection([
         ("refused", "Refused"),
         ("accepted", "Accepted"),
@@ -23,7 +24,7 @@ class PropertyOffer(models.Model):
     _sql_constraints = [
         ("property_offer_price_field_positive",
          "CHECK(price > 0)",
-         "Choose another value - price must be strictly positive!"),
+         "Offered price must be strictly positive!"),
     ]
 
     @api.constrains("date_deadline")
@@ -37,10 +38,11 @@ class PropertyOffer(models.Model):
 
     @api.constrains("status")
     def _check_valid_offer(self):
-        percent90 = self.property_id.expected_price * 0.9
-        if self.status == "accepted" and self.price < percent90:
-            raise ValidationError(
-                f"The offer by {self.partner_id.name} of ${self.price} is less than 90% of the expected price and cannot be accepted.")
+        for record in self:
+            percent90 = record.property_id.expected_price * 0.9
+            if record.status == "accepted" and record.price < percent90:
+                raise ValidationError(
+                    f"The offer by {record.partner_id.name} of ${record.price} is less than 90% of the expected price and cannot be accepted.")
 
     @api.depends("validity")
     def _compute_date_deadline(self):
@@ -82,7 +84,7 @@ class PropertyOffer(models.Model):
         # Set property price, buyer and state
         self.property_id.selling_price = self.price
         self.property_id.partner_id = self.partner_id
-        self.property_id.state = 'accepted'
+        self.property_id.state = "accepted"
 
     def _set_status_refused(self):
         query = [
@@ -101,16 +103,18 @@ class PropertyOffer(models.Model):
             # Set property price, buyer and state
             self.property_id.selling_price = 0
             self.property_id.partner_id = False
-            self.property_id.state = 'received'
+            self.property_id.state = "received"
 
     def action_accept(self):
         for record in self:
-            record.status = "accepted"
-        self._set_status_accepted()
+            if not record.status:
+                record.status = "accepted"
+                self._set_status_accepted()
         return True
 
     def action_refuse(self):
         for record in self:
-            record.status = "refused"
-        self._set_status_refused()
+            if not record.status:
+                record.status = "refused"
+                self._set_status_refused()
         return True

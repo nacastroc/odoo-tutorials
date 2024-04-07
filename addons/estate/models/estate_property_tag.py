@@ -14,5 +14,5 @@ class PropertyTag(models.Model):
     _sql_constraints = [
         ("property_tag_name_field_unique",
          "unique(name)",
-         "Choose another value - property tag name has to be unique!")
+         "The property tag name has to be unique!")
     ]
