@@ -91,6 +91,8 @@ class Property(models.Model):
 
     def action_sold(self):
         for record in self:
+            if "accepted" not in record.offer_ids.mapped("status"):
+                raise UserError("A property cannot be set as sold if no offer has been accepted.")
             if record.state == "cancelled":
                 raise UserError("A cancelled property cannot be set as sold.")
             record.state = "sold"
