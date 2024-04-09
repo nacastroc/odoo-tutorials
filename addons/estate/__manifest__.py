@@ -12,6 +12,7 @@
         'views/estate_property_views.xml',
         'views/estate_property_type_views.xml',
         'views/estate_menus.xml',
+        'views/inherited_users_views.xml',
     ],
     'installable': True,
     'application': True,

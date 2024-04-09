@@ -27,6 +27,18 @@ class PropertyOffer(models.Model):
          "Offered price must be strictly positive!"),
     ]
 
+    @api.model
+    def create(self, vals):
+        property_id = self.env["estate.property"].browse(vals["property_id"])
+        best_price = property_id.best_price
+        # Raise an error if the user tries to create an offer with a lower amount than an existing offer.
+        if vals["price"] < best_price:
+            raise ValidationError(f'The minimum amount required for new offers is ${best_price}')
+        # At offer creation, set the property state to ‘Offer Received’.
+        if len(property_id.offer_ids) == 0 or property_id.state == "new":
+            property_id.state = "received"
+        return super().create(vals)
+
     @api.constrains("date_deadline")
     def _check_date_deadline(self):
         for record in self:
