@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <!-- Search -->
     <record id="view_estate_property_search" model="ir.ui.view">
         <field name="name">estate.property.search</field>
         <field name="model">estate.property</field>
@@ -22,6 +23,7 @@
         </field>
     </record>
 
+    <!-- Form -->
     <record id="estate_property_view_form" model="ir.ui.view">
         <field name="name">estate.property.form</field>
         <field name="model">estate.property</field>
@@ -96,6 +98,7 @@
         </field>
     </record>
 
+    <!-- Tree -->
     <record id="estate_property_view_tree" model="ir.ui.view">
         <field name="name">estate.property.tree</field>
         <field name="model">estate.property</field>
@@ -116,11 +119,41 @@
         </field>
     </record>
 
+    <!-- Kanban -->
+    <record id="estate_property_view_kanban" model="ir.ui.view">
+        <field name="name">estate.property.kanban</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="property_type_id" records_draggable="false">
+                <!-- Required fields added to the view, non-visible, outside template -->
+                <field name="state"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <field name="name" class="h5"/>
+                            <div class="text-muted">
+                                <span>Expected Price: <field name="expected_price"/></span>
+                                <div t-if="record.state.raw_value == 'received'">
+                                    <span>Best Price: <field name="best_price"/></span>
+                                </div>
+                                <div t-if="record.state.raw_value == 'accepted' or record.state.raw_value == 'sold'">
+                                    <span>Selling Price: <field name="selling_price"/></span>
+                                </div>
+                            </div>
+                            <field name="property_tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Actions -->
     <record id="estate_property_action" model="ir.actions.act_window">
         <field name="name">Properties</field>
         <field name="res_model">estate.property</field>
         <field name="search_view_id" ref="view_estate_property_search"/>
         <field name="context">{'search_default_state': True}</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,kanban,form</field>
     </record>
 </odoo>

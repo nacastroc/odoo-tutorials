@@ -62,6 +62,11 @@ class Property(models.Model):
             if record.state not in states:
                 raise UserError(f"The {record.name} property cannot be deleted since its neither new nor cancelled")
 
+    @api.ondelete(at_uninstall=False)
+    def _unlink_offers(self):
+        for record in self:
+            record.offer_ids.unlink()
+
     @api.constrains("expected_price")
     def _check_expected_price(self):
         for record in self:
