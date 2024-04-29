@@ -1,0 +1,377 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* awesome_tshirt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-29 17:32+0000\n"
+"PO-Revision-Date: 2024-04-29 17:32+0000\n"
+"Last-Translator: Nestor Castro <nacastroc@gmail.com>, 2024\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#. module: awesome_tshirt
+#: model_terms:ir.ui.view,arch_db:awesome_tshirt.order_public_page
+msgid ""
+"<select name=\"size\" id=\"size\">\n"
+"                        <option value=\"s\">S</option>\n"
+"                        <option value=\"m\" selected=\"selected\">M</option>\n"
+"                        <option value=\"l\">L</option>\n"
+"                        <option value=\"xl\">XL</option>\n"
+"                        <option value=\"xxl\">XXL</option>\n"
+"                      </select>"
+msgstr ""
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__message_needaction
+msgid "Action Needed"
+msgstr "Acción requerida"
+
+#. module: awesome_tshirt
+#: model_terms:ir.ui.view,arch_db:awesome_tshirt.order_public_page
+msgid "Address"
+msgstr "Dirección Postal"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__amount
+msgid "Amount"
+msgstr "Cantidad"
+
+#. module: awesome_tshirt
+#: model_terms:ir.ui.view,arch_db:awesome_tshirt.orders_kanban_view
+msgid "Amount:"
+msgstr "Cantidad:"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__message_attachment_count
+msgid "Attachment Count"
+msgstr "Adjuntos"
+
+#. module: awesome_tshirt
+#: model:ir.ui.menu,name:awesome_tshirt.menu_root
+msgid "Awesome T-Shirts"
+msgstr "Awesome T-Shirts"
+
+#. module: awesome_tshirt
+#: model:ir.model,name:awesome_tshirt.model_awesome_tshirt_order
+msgid "Awesome T-shirt Orders"
+msgstr "Pedidos de camisetas increíbles"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields.selection,name:awesome_tshirt.selection__awesome_tshirt_order__state__cancelled
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: awesome_tshirt
+#. odoo-javascript
+#: code:addons/awesome_tshirt/static/src/dashboard.xml:0
+#, python-format
+msgid "Cancelled Orders"
+msgstr "Órdenes Canceladas"
+
+#. module: awesome_tshirt
+#: model:ir.model,name:awesome_tshirt.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: awesome_tshirt
+#: model_terms:ir.ui.view,arch_db:awesome_tshirt.orders_kanban_view
+msgid "Created:"
+msgstr "Creado:"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__customer_id
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: awesome_tshirt
+#: model_terms:ir.ui.view,arch_db:awesome_tshirt.orders_kanban_view
+msgid "Customer:"
+msgstr "Cliente:"
+
+#. module: awesome_tshirt
+#. odoo-javascript
+#: code:addons/awesome_tshirt/static/src/dashboard.xml:0
+#, python-format
+msgid "Customers"
+msgstr "Clientes"
+
+#. module: awesome_tshirt
+#: model:ir.actions.client,name:awesome_tshirt.dashboard
+#: model:ir.ui.menu,name:awesome_tshirt.dashboard_menu
+msgid "Dashboard"
+msgstr "Panel"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: awesome_tshirt
+#: model_terms:ir.ui.view,arch_db:awesome_tshirt.order_public_page
+msgid "Email"
+msgstr "Correo Electrónico"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Socios)"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_res_partner__has_active_order
+#: model:ir.model.fields,field_description:awesome_tshirt.field_res_users__has_active_order
+msgid "Has Active Order"
+msgstr "Tiene Pedido Activa"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__has_message
+msgid "Has Message"
+msgstr "Tiene Mensaje"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__id
+msgid "ID"
+msgstr "ID"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,help:awesome_tshirt.field_awesome_tshirt_order__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está activo, nuevos mensajes requieren su atención."
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,help:awesome_tshirt.field_awesome_tshirt_order__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si está activo, algunos mensajes tienen errores de entrega."
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__image_url
+msgid "Image"
+msgstr "Imágen"
+
+#. module: awesome_tshirt
+#: model_terms:ir.ui.view,arch_db:awesome_tshirt.order_public_page
+msgid "Image URL"
+msgstr "URL de Imágen"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__is_late
+msgid "Is late"
+msgstr "Atrasado"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order____last_update
+msgid "Last Modified on"
+msgstr "Última Modificación el"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__write_uid
+msgid "Last Updated by"
+msgstr "Última Actualización por"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__write_date
+msgid "Last Updated on"
+msgstr "Última Actualización por"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjunto Principal"
+
+#. module: awesome_tshirt
+#: model_terms:ir.ui.view,arch_db:awesome_tshirt.thank_you
+msgid "Make another order"
+msgstr "Haga otro pedido"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de entrega de mensaje"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: awesome_tshirt
+#: model_terms:ir.ui.view,arch_db:awesome_tshirt.order_public_page
+msgid "Name"
+msgstr "Nombre"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields.selection,name:awesome_tshirt.selection__awesome_tshirt_order__state__new
+msgid "New"
+msgstr "Nuevo"
+
+#. module: awesome_tshirt
+#. odoo-javascript
+#: code:addons/awesome_tshirt/static/src/dashboard.xml:0
+#, python-format
+msgid "New Orders"
+msgstr "Nuevos Pedidos"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Cantidad de Acciones"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__message_has_error_counter
+msgid "Number of errors"
+msgstr "Cantidad de errores"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,help:awesome_tshirt.field_awesome_tshirt_order__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Cantidad de mensajes que requiren atención"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,help:awesome_tshirt.field_awesome_tshirt_order__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Cantidad de mensajes con errores de entrega"
+
+#. module: awesome_tshirt
+#: model_terms:ir.ui.view,arch_db:awesome_tshirt.order_public_page
+msgid "Order"
+msgstr "Pedido"
+
+#. module: awesome_tshirt
+#: model_terms:ir.ui.view,arch_db:awesome_tshirt.order_public_page
+msgid "Order awesome custom t-shirts"
+msgstr "Ordene increíbles camisetas personalizadas"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_res_partner__order_ids
+#: model:ir.model.fields,field_description:awesome_tshirt.field_res_users__order_ids
+msgid "Orders"
+msgstr "Pedidos"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields.selection,name:awesome_tshirt.selection__awesome_tshirt_order__state__printed
+msgid "Printed"
+msgstr "Imprimido"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__quantity
+#: model_terms:ir.ui.view,arch_db:awesome_tshirt.order_public_page
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: awesome_tshirt
+#: model_terms:ir.ui.view,arch_db:awesome_tshirt.orders_kanban_view
+msgid "Quantity:"
+msgstr "Cantidad:"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields.selection,name:awesome_tshirt.selection__awesome_tshirt_order__state__sent
+msgid "Sent"
+msgstr "Enviado"
+
+#. module: awesome_tshirt
+#. odoo-javascript
+#: code:addons/awesome_tshirt/static/src/dashboard.xml:0
+#, python-format
+msgid "Shirt orders by size"
+msgstr "Pedidos de camisetas por talla"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__size
+#: model_terms:ir.ui.view,arch_db:awesome_tshirt.order_public_page
+msgid "Size"
+msgstr "Talla"
+
+#. module: awesome_tshirt
+#: model_terms:ir.ui.view,arch_db:awesome_tshirt.orders_kanban_view
+msgid "Size:"
+msgstr "Talla:"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,field_description:awesome_tshirt.field_awesome_tshirt_order__state
+msgid "State"
+msgstr "Estado"
+
+#. module: awesome_tshirt
+#: model:ir.actions.act_window,name:awesome_tshirt.orders
+#: model:ir.ui.menu,name:awesome_tshirt.order
+msgid "T-shirt Orders"
+msgstr "Pedidos de Camisetas"
+
+#. module: awesome_tshirt
+#: model_terms:ir.ui.view,arch_db:awesome_tshirt.thank_you
+msgid "Thanks for your order!"
+msgstr "¡Gracias por su pedido!"
+
+#. module: awesome_tshirt
+#: model:ir.model.fields.selection,name:awesome_tshirt.selection__awesome_tshirt_order__size__xl
+msgid "XL"
+msgstr ""
+
+#. module: awesome_tshirt
+#: model:ir.model.fields.selection,name:awesome_tshirt.selection__awesome_tshirt_order__size__xxl
+msgid "XXL"
+msgstr ""
+
+#. module: awesome_tshirt
+#: model:ir.model.fields,help:awesome_tshirt.field_awesome_tshirt_order__image_url
+msgid "encodes the url of the image"
+msgstr "codifica la url de la imágen"
+
+#. module: awesome_tshirt
+#. odoo-javascript
+#: code:addons/awesome_tshirt/static/src/dashboard.xml:0
+#, python-format
+msgid "Number of new orders this month"
+msgstr "Cantidad de pedidos del mes"
+
+#. module: awesome_tshirt
+#. odoo-javascript
+#: code:addons/awesome_tshirt/static/src/dashboard.xml:0
+#, python-format
+msgid "Total amount of new orders this month"
+msgstr "Cantidad total de nuevos pedidos en el mes"
+
+#. module: awesome_tshirt
+#. odoo-javascript
+#: code:addons/awesome_tshirt/static/src/dashboard.xml:0
+#, python-format
+msgid "Average amount of t-shirt by order this month"
+msgstr "Cantidad promedio de camisetas por cada pedido en el mes"
+
+#. module: awesome_tshirt
+#. odoo-javascript
+#: code:addons/awesome_tshirt/static/src/dashboard.xml:0
+#, python-format
+msgid "Number of cancelled orders this month"
+msgstr "Cantidad de pedidos cancelados en el mes"
+
+#. module: awesome_tshirt
+#. odoo-javascript
+#: code:addons/awesome_tshirt/static/src/dashboard.xml:0
+#, python-format
+msgid "Average time for an order to go from 'new' to 'sent' or 'cancelled'"
+msgstr "Tiempo promedio en que un pedido pasa de 'nuevo' a 'enviado' o 'cancelado'"

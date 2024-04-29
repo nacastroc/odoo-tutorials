@@ -2,9 +2,7 @@
 {
     'name': "Awesome Shirt",
 
-    'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+    'summary': "The Awesome T-Shirt company's system to manage orders",
 
     'description': """
         This app helps you to manage a business of printing customized t-shirts
