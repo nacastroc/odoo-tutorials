@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="awesome_tshirt.alert_block" owl="1">
+        <div t-if="!props.record.data.image_url || props.record.data.amount &gt; 100"
+            class="alert alert-warning">
+            <ul class="simple">
+                <li t-if="!props.record.data.image_url">There is no image</li>
+                <li t-if="props.record.data.amount &gt; 100">Add promotional material</li>
+            </ul>
+        </div>
+    </t>
+
+</templates>
