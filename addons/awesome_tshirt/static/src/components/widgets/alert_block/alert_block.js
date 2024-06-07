@@ -3,11 +3,7 @@
 import { registry } from "@web/core/registry";
 import { Component } from "@odoo/owl";
 
-export class AlertBlock extends Component {
-    setup() {
-        console.log("Record: ", this.props.record)
-    }
-}
+export class AlertBlock extends Component {}
 
 AlertBlock.template = "awesome_tshirt.alert_block"
 
